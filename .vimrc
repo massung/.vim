@@ -40,7 +40,7 @@ syntax on
 
 " Use dark background in gui mode
 if has("gui_running")
-	→et background=dark
+	set background=dark
 else
 	set background=light
 endif
