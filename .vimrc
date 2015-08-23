@@ -4,14 +4,23 @@ set runtimepath=~/.vim,$VIMRUNTIME
 set rtp +=~/.vim/gruvbox/
 set rtp +=~/.vim/molokai/
 set rtp +=~/.vim/vim-hybrid/
+set rtp +=~/.vim/jellybeans.vim/
 
-" Add slimv path
+" Add plugins
 set rtp +=~/.vim/slimv.vim/
+set rtp +=~/.vim/vim-gitgutter/
+set rtp +=~/.vim/vim-airline/
 
 " Set the initial size of the frame in gui mode
 if has("gui_running")
     set lines=46 columns=120
 endif
+
+" Use UTF-8
+set encoding=utf-8
+
+" Airline status bar always
+set laststatus=2
 
 " Turn off the menubar and toolbar
 set guioptions -=m
