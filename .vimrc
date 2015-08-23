@@ -41,7 +41,7 @@ endif
 colorscheme gruvbox
 
 " Always expand tabs
-set expandtab tabstop=4
+set expandtab tabstop=4 shiftwidth=4
 
 " Turn off paredit mode
 let g:paredit_mode=0
