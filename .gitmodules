@@ -1,0 +1,12 @@
+[submodule "vim-hybrid"]
+	path = vim-hybrid
+	url = https://github.com/w0ng/vim-hybrid.git
+[submodule "molokai"]
+	path = molokai
+	url = https://github.com/tomasr/molokai.git
+[submodule "gruvbox"]
+	path = gruvbox
+	url = https://github.com/morhetz/gruvbox.git
+[submodule "slimv.vim"]
+	path = slimv.vim
+	url = https://github.com/vim-scripts/slimv.vim.git
