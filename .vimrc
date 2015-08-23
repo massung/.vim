@@ -13,7 +13,7 @@ set rtp +=~/.vim/vim-airline/
 
 " Set the initial size of the frame in gui mode
 if has("gui_running")
-    set lines=46 columns=120
+	set lines=46 columns=120
 endif
 
 " Use UTF-8
@@ -21,6 +21,14 @@ set encoding=utf-8
 
 " Airline status bar always
 set laststatus=2
+
+" Always expand tabs
+set tabstop=4 shiftwidth=4
+
+" Show whitespace characters in gui mode
+if has("gui_running") 
+	set list listchars=tab:→\ ,trail:‧
+endif
 
 " Turn off the menubar and toolbar
 set guioptions -=m
@@ -32,16 +40,13 @@ syntax on
 
 " Use dark background in gui mode
 if has("gui_running")
-    set background=dark
+	→et background=dark
 else
-    set background=light
+	set background=light
 endif
 
 " Pick a color scheme
 colorscheme gruvbox
-
-" Always expand tabs
-set expandtab tabstop=4 shiftwidth=4
 
 " Turn off paredit mode
 let g:paredit_mode=0
