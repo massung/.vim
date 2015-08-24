@@ -7,9 +7,6 @@
 [submodule "gruvbox"]
 	path = gruvbox
 	url = https://github.com/morhetz/gruvbox.git
-[submodule "slimv.vim"]
-	path = slimv.vim
-	url = https://github.com/vim-scripts/slimv.vim.git
 [submodule "vim-airline"]
 	path = vim-airline
 	url = https://github.com/bling/vim-airline.git
@@ -22,3 +19,6 @@
 [submodule "jellybeans.vim"]
 	path = jellybeans.vim
 	url = https://github.com/nanotech/jellybeans.vim.git
+[submodule "slimv"]
+	path = slimv
+	url = https://github.com/kovisoft/slimv.git
