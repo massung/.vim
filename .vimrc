@@ -2,8 +2,9 @@ set runtimepath=~/.vim
 
 " Add plugins
 set rtp +=~/.vim/slimv/
-set rtp +=~/.vim/vim-gitgutter/
 set rtp +=~/.vim/vim-airline/
+set rtp +=~/.vim/vim-gitgutter/
+set rtp +=~/.vim/vim-fugitive/
 
 " Add color theme paths
 set rtp +=~/.vim/gruvbox/

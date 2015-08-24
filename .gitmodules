@@ -22,3 +22,6 @@
 [submodule "slimv"]
 	path = slimv
 	url = https://github.com/kovisoft/slimv.git
+[submodule "vim-fugitive"]
+	path = vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
