@@ -3,7 +3,7 @@ set runtimepath=~/.vim
 " Add plugins
 set rtp +=~/.vim/slimv/
 set rtp +=~/.vim/vim-airline/
-set rtp +=~/.vim/vim-gitgutter/
+"set rtp +=~/.vim/vim-gitgutter/
 set rtp +=~/.vim/vim-fugitive/
 
 " Add color theme paths
@@ -13,8 +13,9 @@ set rtp +=~/.vim/molokai/
 " Add the vim runtime last
 set rtp +=$VIMRUNTIME
 
-" Use UTF-8
+" Use UTF-8 and Unix line endings
 set encoding=utf-8
+set fileformats=unix
 
 " Backspace should do what I expect
 set backspace=2
@@ -36,7 +37,7 @@ if has("gui_running")
   set guioptions -=T
 
   " Show whitespace characters in gui mode
-  set list listchars=tab:→\ ,trail:•
+  set list listchars=tab:»\ ,trail:·
 
   " Set the font to render with
   set guifont=Anonymous\ Pro:h12
@@ -64,7 +65,7 @@ let g:paredit_mode=0
 
 " Configure SWANK
 if has("win32") || has("win64")
-  let g:slimv_swank_cmd='!start "wx86cl64 --load ~/.vim/slimv/slime/start-swank.lisp"'
+  let g:slimv_swank_cmd='!start c:/ccl/wx86cl64 --load u:/.vim/slimv/slime/start-swank.lisp"'
 else
   let g:slimv_swank_cmd='!gnome-terminal -e "lx86cl64 --load ~/.vim/slimv/slime/start-swank.lisp" &'
 endif
