@@ -39,7 +39,7 @@ if has("gui_running")
   set list listchars=tab:→\ ,trail:•
 
   " Set the font to render with
-  set guifont=Anonymous\ Pro\ 12
+  set guifont=Anonymous\ Pro:h12
 endif
 
 " Airline status bar always
@@ -58,9 +58,6 @@ endif
 
 " Pick a color scheme
 colorscheme gruvbox
-
-" GitGutter options
-let g:gitgutter_sign_column_always=1
 
 " Turn off paredit mode
 let g:paredit_mode=0
