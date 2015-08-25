@@ -3,7 +3,6 @@ set runtimepath=~/.vim
 " Add plugins
 set rtp +=~/.vim/slimv/
 set rtp +=~/.vim/vim-airline/
-"set rtp +=~/.vim/vim-gitgutter/
 set rtp +=~/.vim/vim-fugitive/
 
 " Add color theme paths
@@ -25,6 +24,9 @@ set expandtab tabstop=2 shiftwidth=2
 
 " Show a column marker at line 80
 set cc=80
+
+" Automatically remove all trailing whitespace on save
+autocmd BufWritePre * :%s/\s\+$//e
 
 " Set various options when in gui mode
 if has("gui_running")
