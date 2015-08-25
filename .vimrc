@@ -9,8 +9,6 @@ set rtp +=~/.vim/vim-fugitive/
 " Add color theme paths
 set rtp +=~/.vim/gruvbox/
 set rtp +=~/.vim/molokai/
-set rtp +=~/.vim/vim-hybrid/
-set rtp +=~/.vim/jellybeans.vim/
 
 " Add the vim runtime last
 set rtp +=$VIMRUNTIME
@@ -31,7 +29,7 @@ set cc=80
 if has("gui_running")
 
   " Set the size of the window
-  set lines=46 columns=120
+  set lines=46 columns=96
 
   " Turn off the menubar and toolbar
   set guioptions -=m
@@ -42,12 +40,12 @@ if has("gui_running")
 
   " Set the font to render with
   if has("gui_gtk2")
-    set guifont=Droid\ Sans\ Mono:h12
+    set guifont=DejaVu\ Sans\ Mono\ 11
   elseif has("gui_macvim")
     set guifont=Monaco:h14
   elseif has("gui_win32") || has("gui_win64")
     set guifont=Consolas:h11
-  end
+  endif
 endif
 
 " Airline status bar always

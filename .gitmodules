@@ -1,6 +1,3 @@
-[submodule "vim-hybrid"]
-	path = vim-hybrid
-	url = https://github.com/w0ng/vim-hybrid.git
 [submodule "molokai"]
 	path = molokai
 	url = https://github.com/tomasr/molokai.git
@@ -13,12 +10,6 @@
 [submodule "vim-gitgutter"]
 	path = vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
-[submodule "bundle/vim-gitgutter"]
-	path = bundle/vim-gitgutter
-	url = https://github.com/airblade/vim-gitgutter.git
-[submodule "jellybeans.vim"]
-	path = jellybeans.vim
-	url = https://github.com/nanotech/jellybeans.vim.git
 [submodule "slimv"]
 	path = slimv
 	url = https://github.com/kovisoft/slimv.git
