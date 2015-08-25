@@ -39,13 +39,7 @@ if has("gui_running")
   set list listchars=tab:→\ ,trail:•
 
   " Set the font to render with
-  if has("gui_gtk2")
-    set guifont=DejaVu\ Sans\ Mono\ 11
-  elseif has("gui_macvim")
-    set guifont=Monaco:h14
-  elseif has("gui_win32") || has("gui_win64")
-    set guifont=Consolas:h11
-  endif
+  set guifont=Anonymous\ Pro\ 12
 endif
 
 " Airline status bar always
