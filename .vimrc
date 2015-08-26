@@ -3,6 +3,7 @@ set runtimepath=~/.vim
 " Add plugins
 set rtp +=~/.vim/slimv/
 set rtp +=~/.vim/vim-airline/
+set rtp +=~/.vim/vim-gitgutter/
 set rtp +=~/.vim/vim-fugitive/
 
 " Add color theme paths
@@ -42,7 +43,11 @@ if has("gui_running")
   set list listchars=tab:»\ ,trail:·
 
   " Set the font to render with
-  set guifont=Anonymous\ Pro:h12
+  if has("gui_win32") || has("gui_win64")
+    set guifont=Anonymous\ Pro:h12
+  else
+    set guifont=Anonymous\ Pro\ 12
+  endif
 endif
 
 " Airline status bar always
