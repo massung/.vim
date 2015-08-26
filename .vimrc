@@ -20,34 +20,38 @@ set fileformats=unix
 " Backspace should do what I expect
 set backspace=2
 
-" Setup tabs
-set expandtab tabstop=2 shiftwidth=2
+" Setup tab
+set noexpandtab tabstop=2 shiftwidth=2
+
+" In Lisp we want to expand tabs
+autocmd Filetype lisp setlocal expandtab
+autocmd BufWritePre lisp retab
 
 " Show a column marker at line 80
 set cc=80
 
-" Automatically remove all trailing whitespace on save
+" Automatically remove all trailing whitespace on save and retab
 autocmd BufWritePre * :%s/\s\+$//e
 
 " Set various options when in gui mode
 if has("gui_running")
 
-  " Set the size of the window
-  set lines=46 columns=96
+	" Set the size of the window
+	set lines=46 columns=96
 
-  " Turn off the menubar and toolbar
-  set guioptions -=m
-  set guioptions -=T
+	" Turn off the menubar and toolbar
+	set guioptions -=m
+	set guioptions -=T
 
-  " Show whitespace characters in gui mode
-  set list listchars=tab:»\ ,trail:·
+	" Show whitespace characters in gui mode
+	set list listchars=tab:»\ ,trail:·
 
-  " Set the font to render with
-  if has("gui_win32") || has("gui_win64")
-    set guifont=Anonymous\ Pro:h12
-  else
-    set guifont=Anonymous\ Pro\ 12
-  endif
+	" Set the font to render with
+	if has("gui_win32") || has("gui_win64")
+		set guifont=Anonymous\ Pro:h12
+	else
+		set guifont=Anonymous\ Pro\ 12
+	endif
 endif
 
 " Airline status bar always
@@ -59,20 +63,23 @@ syntax on
 
 " Use dark background in gui mode
 if has("gui_running")
-  set background=dark
+	set background=dark
 else
-  set background=light
+	set background=light
 endif
 
 " Pick a color scheme
 colorscheme gruvbox
+
+" Inserting comments in lisp
+nnoremap ]; i;;;<space><esc>52a-<esc>
 
 " Turn off paredit mode
 let g:paredit_mode=0
 
 " Configure SWANK
 if has("win32") || has("win64")
-  let g:slimv_swank_cmd='!start c:/ccl/wx86cl64 --load u:/.vim/slimv/slime/start-swank.lisp"'
+	let g:slimv_swank_cmd='!start c:/ccl/wx86cl64 --load u:/.vim/slimv/slime/start-swank.lisp"'
 else
-  let g:slimv_swank_cmd='!gnome-terminal -e "lx86cl64 --load ~/.vim/slimv/slime/start-swank.lisp" &'
+	let g:slimv_swank_cmd='!gnome-terminal -e "lx86cl64 --load ~/.vim/slimv/slime/start-swank.lisp" &'
 endif
