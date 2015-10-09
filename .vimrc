@@ -20,15 +20,17 @@ set fileformats=unix
 " Backspace should do what I expect
 set backspace=2
 
-" Setup tab
-set noexpandtab tabstop=2 shiftwidth=2
-
-" In Lisp we want to expand tabs
-autocmd Filetype lisp setlocal expandtab
-autocmd BufWritePre lisp retab
+" Setup tabs
+set noexpandtab tabstop=3 shiftwidth=3
 
 " Show a column marker at line 80
 set cc=80
+
+" Disable auto commenting
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" Associate various file extensions with syntax
+autocmd BufRead,BufNewFile *.vala set filetype=vala
 
 " Automatically remove all trailing whitespace on save and retab
 autocmd BufWritePre * :%s/\s\+$//e
