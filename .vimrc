@@ -9,6 +9,7 @@ set rtp +=~/.vim/vim-fugitive/
 " Add color theme paths
 set rtp +=~/.vim/gruvbox/
 set rtp +=~/.vim/molokai/
+set rtp +=~/.vim/SerialExperimentsLain/
 
 " Add the vim runtime last
 set rtp +=$VIMRUNTIME
@@ -71,7 +72,7 @@ else
 endif
 
 " Pick a color scheme
-colorscheme gruvbox
+colorscheme SerialExperimentsLain
 
 " Inserting comments in lisp
 nnoremap ]; i;;;<space><esc>52a-<esc>
