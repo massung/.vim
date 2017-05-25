@@ -31,7 +31,6 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Automatically remove all trailing whitespace on save and retab
 autocmd BufWritePre * :%s/\s\+$//e
-autocmd BufWritePre * :%s/\r//g
 
 " Set various options when in gui mode
 if has("gui_running")
