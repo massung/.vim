@@ -1,7 +1,6 @@
 set runtimepath=~/.vim
 
 " Add plugins
-set rtp +=~/.vim/slimv/
 set rtp +=~/.vim/vim-airline/
 set rtp +=~/.vim/vim-gitgutter/
 set rtp +=~/.vim/vim-fugitive/
@@ -25,16 +24,14 @@ set backspace=2
 set noexpandtab tabstop=3 shiftwidth=3
 
 " Show a column marker at line 80
-set cc=80
+"set cc=80
 
 " Disable auto commenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-" Associate various file extensions with syntax
-autocmd BufRead,BufNewFile *.vala set filetype=vala
-
 " Automatically remove all trailing whitespace on save and retab
 autocmd BufWritePre * :%s/\s\+$//e
+autocmd BufWritePre * :%s/\r//g
 
 " Set various options when in gui mode
 if has("gui_running")
@@ -74,15 +71,5 @@ endif
 " Pick a color scheme
 colorscheme SerialExperimentsLain
 
-" Inserting comments in lisp
-nnoremap ]; i;;;<space><esc>52a-<esc>
-
 " Turn off paredit mode
 let g:paredit_mode=0
-
-" Configure SWANK
-if has("win32") || has("win64")
-	let g:slimv_swank_cmd='!start c:/ccl/wx86cl64 --load u:/.vim/slimv/slime/start-swank.lisp"'
-else
-	let g:slimv_swank_cmd='!gnome-terminal -e "lx86cl64 --load ~/.vim/slimv/slime/start-swank.lisp" &'
-endif
