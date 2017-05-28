@@ -4,6 +4,7 @@ set runtimepath=~/.vim
 set rtp +=~/.vim/vim-airline/
 set rtp +=~/.vim/vim-gitgutter/
 set rtp +=~/.vim/vim-fugitive/
+set rtp +=~/.vim/vim-go/
 
 " Add color theme paths
 set rtp +=~/.vim/gruvbox/

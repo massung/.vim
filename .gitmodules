@@ -19,3 +19,6 @@
 [submodule "SerialExperimentsLain"]
 	path = SerialExperimentsLain
 	url = https://github.com/lu-ren/SerialExperimentsLain.git
+[submodule "vim-go"]
+	path = vim-go
+	url = https://github.com/fatih/vim-go.git
