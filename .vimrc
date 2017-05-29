@@ -31,15 +31,13 @@ set noexpandtab tabstop=3 shiftwidth=3
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Automatically remove all trailing whitespace on save and retab
-autocmd BufWritePre * :%s/\s\+$//e
+autocmd BufWritePre * :%s/\s*\?$//e
 
 " Map .go files to go syntax highlighting
 au BufRead,BufNewFile *.go set filetype=go
 
 " Set various options when in gui mode
 if has("gui_running")
-
-	" Set the size of the window
 	set lines=46 columns=96
 
 	" Turn off the menubar and toolbar
