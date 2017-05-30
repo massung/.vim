@@ -27,14 +27,24 @@ set noexpandtab tabstop=3 shiftwidth=3
 " Show a column marker at line 80
 "set cc=80
 
-" Disable auto commenting
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+function! RmTrailingSpaces()
+	let l:winview = winsaveview()
+
+	" Kill whitespace and ^M at the end of a line
+	silent! %s/\s*\?$//e
+
+	" Restore the view back to what it was
+	call winrestview(l:winview)
+endfunction
 
 " Automatically remove all trailing whitespace on save and retab
-autocmd BufWritePre * :%s/\s*\?$//e
+autocmd BufWritePre * call RmTrailingSpaces()
 
 " Map .go files to go syntax highlighting
 au BufRead,BufNewFile *.go set filetype=go
+
+" Disable auto commenting
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Set various options when in gui mode
 if has("gui_running")
@@ -44,9 +54,6 @@ if has("gui_running")
 	set guioptions -=m
 	set guioptions -=T
 
-	" Show whitespace characters in gui mode
-	set list listchars=tab:»\ ,trail:·
-
 	" Set the font to render with
 	if has("gui_win32") || has("gui_win64")
 		set guifont=Anonymous\ Pro:h12
@@ -54,6 +61,9 @@ if has("gui_running")
 		set guifont=Anonymous\ Pro\ 12
 	endif
 endif
+
+" Show whitespace characters in gui mode
+set list listchars=tab:»\ ,trail:·
 
 " Airline status bar always
 set laststatus=2
