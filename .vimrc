@@ -27,19 +27,6 @@ set noexpandtab tabstop=3 shiftwidth=3
 " Show a column marker at line 80
 "set cc=80
 
-function! RmTrailingSpaces()
-	let l:winview = winsaveview()
-
-	" Kill whitespace and ^M at the end of a line
-	silent! %s/\s*\?$//e
-
-	" Restore the view back to what it was
-	call winrestview(l:winview)
-endfunction
-
-" Automatically remove all trailing whitespace on save and retab
-autocmd BufWritePre * call RmTrailingSpaces()
-
 " Map .go files to go syntax highlighting
 au BufRead,BufNewFile *.go set filetype=go
 
@@ -63,7 +50,7 @@ if has("gui_running")
 endif
 
 " Show whitespace characters in gui mode
-set list listchars=tab:»\ ,trail:·
+set list listchars=tab:∙\ ,nbsp:_,trail:~,extends:>,precedes:<
 
 " Airline status bar always
 set laststatus=2
