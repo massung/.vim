@@ -16,7 +16,12 @@ set rtp +=$VIMRUNTIME
 
 " Use UTF-8 and Unix line endings
 set encoding=utf-8
-set fileformats=unix
+
+if has("win32")
+	set fileformats=dos
+else
+	set fileformats=unix
+end
 
 " Backspace should do what I expect
 set backspace=2
