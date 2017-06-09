@@ -55,7 +55,7 @@ if has("gui_running")
 endif
 
 " Show whitespace characters in gui mode
-set list listchars=tab:∙\ ,nbsp:_,trail:~,extends:>,precedes:<
+set list listchars=tab:•\ ,nbsp:_,trail:~,extends:>,precedes:<
 
 " Airline status bar always
 set laststatus=2
